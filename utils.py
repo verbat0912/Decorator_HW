@@ -11,7 +11,7 @@ def logger1(old_function):
             with open('main.log', 'a', encoding='utf-8') as f:
                 f.writelines(f'Дата запуска функции: {start_func};\n Имя функции:{name_func};\n '
                              f'Аргументы функции:{[*args]}{dict(**kwargs)}\n Результат: {result}\n')
-
+            return result
     return new_function
 
 
